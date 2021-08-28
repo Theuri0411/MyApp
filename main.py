@@ -27,15 +27,15 @@ class childApp(GridLayout):
         self.add_widget(self.s_age)
 
         self.press = Button(text="Click")
-        self.press.bind(on_click=self.click_me)
+        self.press.bind(on_press=self.click_me)
         self.add_widget(self.press)
 
     def click_me(self, instance):
         print("Name of Student is "+self.s_name.text)
-        print("Marks of Student is " + self.s_name.text)
-        print("Gender of Student is " + self.s_name.text)
-        print("Age of Student is " + self.s_name.text)
-
+        print("Marks of Student is " + self.s_marks.text)
+        print("Gender of Student is " + self.s_gender.text)
+        print("Age of Student is " + self.s_age.text)
+        print("")
 
 
 class parentApp(App):
