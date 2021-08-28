@@ -6,7 +6,6 @@ from kivy.uix.textinput import TextInput
 from kivy.uix.button import Button
 
 
-
 class childApp(GridLayout):
     def __init__(self, **kwargs):
         super(childApp, self).__init__()
@@ -27,11 +26,22 @@ class childApp(GridLayout):
         self.s_age = TextInput()
         self.add_widget(self.s_age)
 
+        self.press = Button(text="Click")
+        self.press.bind(on_click=self.click_me)
+        self.add_widget(self.press)
+
+    def click_me(self, instance):
+        print("Name of Student is "+self.s_name.text)
+        print("Marks of Student is " + self.s_name.text)
+        print("Gender of Student is " + self.s_name.text)
+        print("Age of Student is " + self.s_name.text)
+
 
 
 class parentApp(App):
     def build(self):
         return childApp()
+
 
 if __name__ == "__main__":
     parentApp().run()
