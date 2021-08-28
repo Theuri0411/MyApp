@@ -26,3 +26,12 @@ class childApp(GridLayout):
         self.add_widget(Label(text="Student Age"))
         self.s_age = TextInput()
         self.add_widget(self.s_age)
+
+
+
+class parentApp(App):
+    def build(self):
+        return childApp()
+
+if __name__ == "__main__":
+    parentApp().run()
